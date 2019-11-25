@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LineChartActivity">
+
+  <com.github.mikephil.charting.charts.LineChart
+      android:id="@+id/lineChart"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_above="@id/seekBarLayout"/>
+
+    <LinearLayout
+        android:id="@+id/seekBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp">
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:layout_marginBottom="20dp">
+
+           <SeekBar
+               android:id="@+id/sb_amount"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginRight="5dp"
+               android:max="20"
+               android:layout_marginLeft="5dp"
+               android:layout_toLeftOf="@id/txvDataAmount"/>
+
+           <TextView
+               android:id="@+id/txvDataAmount"
+               android:layout_width="50dp"
+               android:layout_height="wrap_content"
+               android:textSize="16sp"
+               android:text="0"
+               android:gravity="center"
+               android:layout_alignParentRight="true"/>
+       </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <SeekBar
+                android:id="@+id/sb_range"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:max="20"
+                android:layout_toLeftOf="@id/txvDataRange"/>
+
+            <TextView
+                android:id="@+id/txvDataRange"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="0"
+                android:gravity="center"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
